@@ -20,7 +20,7 @@ const options = {
         text.innerHTML=quote;
         author.innerHTML=authorData;
         const elTweet=text.innerText
-        tweet.href=`https://twitter.com/intent/tweet?"${elTweet}"`
+        tweet.href=`https://twitter.com/intent/tweet?text=${elTweet}`
     })
     .catch(err => console.error(err));
 
@@ -43,7 +43,7 @@ newQuote.addEventListener('click',() =>{
             console.log(text);
             author.innerHTML=authorData;
             const elTweet=text.innerText
-            tweet.href=`https://twitter.com/intent/tweet?"${elTweet}"`
+            tweet.href=`https://twitter.com/intent/tweet?text=${elTweet}`
         })
         .catch(err => console.error(err));
 })
