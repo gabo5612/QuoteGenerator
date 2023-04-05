@@ -17,7 +17,7 @@ const options = {
     .then(data => {
         const quote = data.content;
         const authorData= data.originator.name 
-        text.innerHTML=quote;
+        text.innerHTML=`"${quote}"`;
         author.innerHTML=authorData;
         const elTweet=text.innerText
         tweet.href=`https://twitter.com/intent/tweet?text=${elTweet}`
@@ -39,8 +39,8 @@ newQuote.addEventListener('click',() =>{
         .then(data => {
             const quote = data.content;
             const authorData= data.originator.name 
-            text.innerHTML=quote;
-            console.log(text);
+            text.innerHTML=`"${quote}"`;
+         
             author.innerHTML=authorData;
             const elTweet=text.innerText
             tweet.href=`https://twitter.com/intent/tweet?text=${elTweet}`
